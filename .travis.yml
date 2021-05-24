@@ -15,9 +15,9 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t simple-node-zar .
-  - docker tag simple-node-zar mobeenzar/simple-node-zar:latest
+  - docker build -t simple-node-taha .
+  - docker tag simple-node-taha mobeenzar/simple-node-taha:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push mobeenzar/simple-node-zar
+  - docker push mobeenzar/simple-node-taha
